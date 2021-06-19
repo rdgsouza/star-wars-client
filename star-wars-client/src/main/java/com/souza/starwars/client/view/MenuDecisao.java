@@ -21,7 +21,7 @@ public class MenuDecisao {
 				int opcao = menu.nextInt();
 
 				if (opcao == 2) {
-					System.out.print("\nAté logo e que a força esteja com você! =)");
+					System.out.print("\nAté logo e que a força esteja com você! =)\n");
 
 					menu.close();
 					System.exit(0);

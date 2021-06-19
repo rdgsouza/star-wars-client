@@ -23,7 +23,7 @@ public class MenuInicial {
 				int opcao = menu.nextInt();
 
 				if (opcao == 3) {
-					System.out.print("\nAté logo e que a força esteja com você! =)");
+					System.out.print("\nAté logo e que a força esteja com você! =)\n");
 
 					menu.close();
 					System.exit(0);
