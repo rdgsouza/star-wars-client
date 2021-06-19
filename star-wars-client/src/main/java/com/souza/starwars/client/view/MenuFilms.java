@@ -7,10 +7,12 @@ import com.souza.starwars.client.exception.ClientApiException;
 
 public class MenuFilms {
 
+	
 	public static void menuFilmes() {
 
 		try {
-
+			FilmsClientController filmsClientController = new FilmsClientController();
+			
 			Scanner menu = new Scanner(System.in);
 
 			while (true) {
@@ -36,7 +38,7 @@ public class MenuFilms {
 				switch (opcao) {
 				case 1:
 					try {
-						FilmsClientController.listaFilmes();
+						filmsClientController.listaFilmes();
 					} catch (Exception e) {
 						MenuDecisao.menuDecisao();
 					}
