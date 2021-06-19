@@ -2,7 +2,9 @@ Projeto Java Client que faz uso do RestTemplate com o objetivo de consumir recur
 Recurso implementados:
 Films, People.
 
-Basta baixar e executar o projeto na sua IDE ou fazer o build do projeto usando o maven e em seguida executar o arquivo .jar.
+Classes de testes unitários implementados para todo os métodos. 
+
+Para executar o projeto, basta baixar e executar o projeto na sua IDE ou fazer o build do projeto usando o maven e em seguida executar o arquivo .jar.
 Se divirta!
 
 Requisitos:
