@@ -47,9 +47,9 @@ public class PeopleClientController {
 
 		People people = p.getBody();
 
-		PeopleRepresentationModel peopleModel = peopleModelAssembler.toModel(people);
+		PeopleRepresentationModel peopleRepresentationModel = peopleModelAssembler.toModel(people);
 
-		System.out.println("\n*** Informação do personagem ***\n" + peopleModel.toString());
+		System.out.println("\n*** Informação do personagem ***\n" + peopleRepresentationModel.toString());
 
 	}
 
@@ -64,7 +64,7 @@ public class PeopleClientController {
 
 		List<String> peoples = peopleClientService.buscaPersonagemPorNome();
 
-		System.out.println("\n*** Informação do personagem em paginação ***");
+		System.out.println("\n*** Informação do personagens em paginação ***");
 
 		peoples.stream().forEach(p -> System.out.println(p));
 

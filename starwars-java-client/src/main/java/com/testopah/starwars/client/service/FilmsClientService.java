@@ -12,8 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import com.testopah.starwars.client.domain.model.People;
-import com.testopah.starwars.client.domain.model.PeopleFilter;
+import com.testopah.starwars.client.domain.model.Films;
+import com.testopah.starwars.client.domain.model.FilmsFilter;
 import com.testopah.starwars.client.exception.ClientApiException;
 
 import lombok.AllArgsConstructor;
@@ -21,47 +21,46 @@ import lombok.extern.slf4j.Slf4j;
 
 @AllArgsConstructor
 @Slf4j
-public class PeopleClientService {
+public class FilmsClientService {
 
 	public RestTemplate restTemplate;
 	public String url;
 
-	public ResponseEntity<People> buscaPersonagemPorId() {
+	public ResponseEntity<Films> buscaFilmePorId() {
 
 		try {
 			URI resourceUri = URI.create(url);
-			log.info("Fazendo a busca do personagem na API SWAP...");
-			ResponseEntity<People> people = restTemplate.exchange(
-					resourceUri, HttpMethod.GET, null, People.class);
+			log.info("Fazendo a busca do filme na API SWAP...");
+			ResponseEntity<Films> films = restTemplate.exchange(
+					resourceUri, HttpMethod.GET, null, Films.class);
 			log.info("Busca concluida com sucesso!");
 
-			return people;
+			return films;
 
 		} catch (HttpClientErrorException e) {
 			throw new ClientApiException(e.getMessage(), e);
 		}
 	}
 
-	public List<String> buscaPersonagemPorNome() {
+	public List<String> buscaFilmesPorNome() {
 
 		try {
 			URI resourceUri = URI.create(url);
 
-			log.info("Fazendo a busca dos personagens na API SWAP...");
-			ResponseEntity<PeopleFilter> peopleFilter = restTemplate.exchange(
-					resourceUri, HttpMethod.GET, geraHeaders(),
-					PeopleFilter.class);
+			log.info("Fazendo a busca dos filmes na API SWAP...");
+			ResponseEntity<FilmsFilter> filmsFilter = restTemplate.exchange(
+					resourceUri, HttpMethod.GET, geraHeaders(), FilmsFilter.class);
 			log.info("Busca concluida com sucesso!");
 
-			List<PeopleFilter> peoples = Arrays.asList(peopleFilter.getBody());
+			List<FilmsFilter> films = Arrays.asList(filmsFilter.getBody());
 
 			StringBuilder stringBuilder = new StringBuilder();
 
-			for (PeopleFilter p : peoples) {
-				stringBuilder.append(p);
+			for (FilmsFilter f : films) {
+				stringBuilder.append(f);
 			}
 
-			String result = stringBuilder.toString().replace("Name", "\n Name");
+			String result = stringBuilder.toString().replace("Title", "\n Title");
 
 			return Arrays.asList(result);
 
@@ -70,24 +69,24 @@ public class PeopleClientService {
 		}
 	}
 
-	public List<String> Listarpersonagens() {
+	public List<String> ListarFilmes() {
 		try {
 			URI resourceUri = URI.create(url);
-			log.info("Fazendo a busca de todos os personagens na API SWAPI...");
-			ResponseEntity<PeopleFilter> peopleFilter = restTemplate.exchange(
+			log.info("Fazendo a busca de todos os filmes na API SWAPI...");
+			ResponseEntity<FilmsFilter> fimsFilter = restTemplate.exchange(
 					resourceUri, HttpMethod.GET, null,
-					PeopleFilter.class);
+					FilmsFilter.class);
 			log.info("Busca finalizada com sucesso!");
 
-			List<PeopleFilter> peoples = Arrays.asList(peopleFilter.getBody());
+			List<FilmsFilter> films = Arrays.asList(fimsFilter.getBody());
 
 			StringBuilder stringBuilder = new StringBuilder();
 
-			for (PeopleFilter p : peoples) {
-				stringBuilder.append(p);
+			for (FilmsFilter f : films) {
+				stringBuilder.append(f);
 			}
 
-			String result = stringBuilder.toString().replace("Name", "\n Name");
+			String result = stringBuilder.toString().replace("Title", "\n Title");
 
 			return Arrays.asList(result);
 

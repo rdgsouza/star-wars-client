@@ -29,10 +29,10 @@ public class PeopleRepresentationModel {
 	@Override
 	public String toString() {
 		return String.format("\n"
-			+ " Name: %s \n Height: %s \n Mass: %s \n Hair color: %s \n Skin color: %s \n Eye color: %s "
-			+ "\n Birth year: %s \n Gender: %s \n Homeworld: %s \n Films: %s \n Species: %s \n Vehicles :%s "
-			+ "\n Starships: %s \n Created: %s \n Edited: %s \n Url: %s"
-			,name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld 
-			,films, species, vehicles, starships, created, edited, url);
+		   + " Name: %s \n Height: %s \n Mass: %s \n Hair color: %s \n Skin color: %s \n Eye color: %s "
+		   + "\n Birth year: %s \n Gender: %s \n Homeworld: %s \n Films: %s \n Species: %s \n Vehicles :%s "
+		   + "\n Starships: %s \n Created: %s \n Edited: %s \n Url: %s"
+		   ,name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld 
+		   ,films, species, vehicles, starships, created, edited, url);
 	}
 }
