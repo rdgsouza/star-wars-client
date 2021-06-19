@@ -1,4 +1,4 @@
-package com.testopah.starwars;
+package com.souza.starwars;
 
 import org.springframework.stereotype.Component;
 
