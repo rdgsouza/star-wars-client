@@ -9,10 +9,10 @@
 		<version>2.5.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.opah-client</groupId>
-	<artifactId>opah-client</artifactId>
+	<groupId>com.souza-client</groupId>
+	<artifactId>com.souza-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>opah-client</name>
+	<name>com.souza-client</name>
 	<description>Client da API Star Wars</description>
 	<properties>
 		<java.version>11</java.version>
