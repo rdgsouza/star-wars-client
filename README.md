@@ -4,7 +4,7 @@ Films, People.
 
 Classe de testes unitários para todo os métodos do projeto usando JUnit. 
 
-Para executar o projeto, basta baixar e executar o projeto na sua IDE ou fazer o build do projeto usando o maven e em seguida executar o arquivo .jar.
+Para executar o projeto, basta baixar e importar na sua IDE e executar a classe Start_StarWarsMain.java ou fazer o build do projeto usando o maven e em seguida executar o arquivo .jar gerado.
 Se divirta!
 
 Requisitos:
