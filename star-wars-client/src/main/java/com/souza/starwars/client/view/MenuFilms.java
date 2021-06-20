@@ -11,7 +11,6 @@ public class MenuFilms {
 	public static void menuFilmes() {
 
 		try {
-			FilmsClientController filmsClientController = new FilmsClientController();
 			
 			Scanner menu = new Scanner(System.in);
 
@@ -38,7 +37,7 @@ public class MenuFilms {
 				switch (opcao) {
 				case 1:
 					try {
-						filmsClientController.listaFilmes();
+						FilmsClientController.listaFilmes();
 					} catch (Exception e) {
 						MenuDecisao.menuDecisao();
 					}
