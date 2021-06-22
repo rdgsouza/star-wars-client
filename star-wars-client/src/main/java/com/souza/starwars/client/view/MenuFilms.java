@@ -36,11 +36,8 @@ public class MenuFilms {
 
 				switch (opcao) {
 				case 1:
-					try {
 						FilmsClientController.listaFilmes();
-					} catch (Exception e) {
 						MenuDecisao.menuDecisao();
-					}
 					break;
 
 				case 2:

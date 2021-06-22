@@ -35,11 +35,8 @@ public class MenuPeople {
 
 				switch (opcao) {
 				case 1:
-					try {
 						PeopleClientController.listaPersonagens();
-					} catch (Exception e) {
 						MenuDecisao.menuDecisao();
-					}
 					break;
 
 				case 2:
