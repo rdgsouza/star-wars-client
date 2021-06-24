@@ -1,4 +1,6 @@
-Projeto Java Client que faz uso do RestTemplate com o objetivo de consumir recursos da API REST SWAPI.
+Projeto Java Client que faz uso do RestTemplate com o objetivo de consumir recursos da API pública SWAPI The Star Wars API.
+Documentação da API SWAPI na url: https://swapi.dev/documentation
+
 Recurso implementados:
 Films, People.
 
