@@ -20,7 +20,7 @@ public class FilmsClientController {
 	public static List<String> listaFilmes() {
 
 			RestTemplate restTemplate = new RestTemplate();
-			String uri = "https://swapi.dev/api/films/";
+			String uri = "https://swapi.dev/api/filmssss/";
 
 			FilmsClientService filmsClientService = new FilmsClientService(restTemplate, uri);
 
